@@ -32,6 +32,10 @@ const onSubmit=()=>{
       toast.error('Both fields must be filled');
       return;
     }
+if(isNaN(parseFloat(amount.value))){
+    toast.error('Amount must be a number');
+    return;
+}
 const transactiononData={
     text:text.value,
     amount:parseFloat(amount.value),
